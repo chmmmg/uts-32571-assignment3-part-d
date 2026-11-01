@@ -1,0 +1,110 @@
+[
+  {
+    "scenario_id": "T010-S01",
+    "case_id": "T010",
+    "function_id": "F10",
+    "function": "Add Product to Wishlist",
+    "part": "D",
+    "allocated_member": "Haoming Chen",
+    "title": "Add one product",
+    "planned_input": "Signed-in fresh test account; iPhone 40",
+    "expected": "One wishlist row for product 40 and matching name/model after reopening wishlist.",
+    "expected_basis": "OpenCart visible form/workflow plus business invariants; locked before formal execution."
+  },
+  {
+    "scenario_id": "T010-S02",
+    "case_id": "T010",
+    "function_id": "F10",
+    "function": "Add Product to Wishlist",
+    "part": "D",
+    "allocated_member": "Haoming Chen",
+    "title": "Add the same product twice",
+    "planned_input": "Signed-in fresh test account; product 40 twice",
+    "expected": "The wishlist contains one row for product 40, without duplicates.",
+    "expected_basis": "OpenCart visible form/workflow plus business invariants; locked before formal execution."
+  },
+  {
+    "scenario_id": "T010-S03",
+    "case_id": "T010",
+    "function_id": "F10",
+    "function": "Add Product to Wishlist",
+    "part": "D",
+    "allocated_member": "Haoming Chen",
+    "title": "Guest attempts to save a product",
+    "planned_input": "Fresh guest session; product 40",
+    "expected": "A login/register notice is shown; opening the wishlist redirects to login.",
+    "expected_basis": "OpenCart visible form/workflow plus business invariants; locked before formal execution."
+  },
+  {
+    "scenario_id": "T011-S01",
+    "case_id": "T011",
+    "function_id": "F11",
+    "function": "Remove Wishlist Item",
+    "part": "D",
+    "allocated_member": "Haoming Chen",
+    "title": "Remove the only item",
+    "planned_input": "Fresh account wishlist [40]; remove 40",
+    "expected": "Product 40 is absent and the wishlist empty-state message is displayed.",
+    "expected_basis": "OpenCart visible form/workflow plus business invariants; locked before formal execution."
+  },
+  {
+    "scenario_id": "T011-S02",
+    "case_id": "T011",
+    "function_id": "F11",
+    "function": "Remove Wishlist Item",
+    "part": "D",
+    "allocated_member": "Haoming Chen",
+    "title": "Remove one of two items",
+    "planned_input": "Fresh account wishlist [40,43]; remove 40",
+    "expected": "Only product 43 remains; the removed product is absent after reopening.",
+    "expected_basis": "OpenCart visible form/workflow plus business invariants; locked before formal execution."
+  },
+  {
+    "scenario_id": "T011-S03",
+    "case_id": "T011",
+    "function_id": "F11",
+    "function": "Remove Wishlist Item",
+    "part": "D",
+    "allocated_member": "Haoming Chen",
+    "title": "Remove the middle of three items",
+    "planned_input": "Fresh account wishlist [40,43,28]; remove 43",
+    "expected": "Products 40 and 28 remain, and product 43 is absent after reopening.",
+    "expected_basis": "OpenCart visible form/workflow plus business invariants; locked before formal execution."
+  },
+  {
+    "scenario_id": "T012-S01",
+    "case_id": "T012",
+    "function_id": "F12",
+    "function": "Product Comparison",
+    "part": "D",
+    "allocated_member": "Haoming Chen",
+    "title": "Compare two products",
+    "planned_input": "Fresh session; products 40 and 43",
+    "expected": "Both product names/models/prices agree with the product pages and each product occupies one comparison column.",
+    "expected_basis": "OpenCart visible form/workflow plus business invariants; locked before formal execution."
+  },
+  {
+    "scenario_id": "T012-S02",
+    "case_id": "T012",
+    "function_id": "F12",
+    "function": "Product Comparison",
+    "part": "D",
+    "allocated_member": "Haoming Chen",
+    "title": "Compare the same product twice",
+    "planned_input": "Fresh session; product 40 twice",
+    "expected": "Only one comparison column for product 40 remains.",
+    "expected_basis": "OpenCart visible form/workflow plus business invariants; locked before formal execution."
+  },
+  {
+    "scenario_id": "T012-S03",
+    "case_id": "T012",
+    "function_id": "F12",
+    "function": "Product Comparison",
+    "part": "D",
+    "allocated_member": "Haoming Chen",
+    "title": "Remove one comparison entry",
+    "planned_input": "Fresh session; products 40 and 43; remove 40",
+    "expected": "Product 40 is absent and product 43 remains in the comparison table.",
+    "expected_basis": "OpenCart visible form/workflow plus business invariants; locked before formal execution."
+  }
+]
